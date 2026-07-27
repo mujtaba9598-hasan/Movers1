@@ -19,6 +19,7 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mujtaba9598-hasan.github.io/Movers1"),
   title: "Movers & Packers | UAE",
   description: "Your perfect moving partner. Local & International relocation services by Saif.",
 };
