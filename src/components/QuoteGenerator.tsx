@@ -11,6 +11,7 @@ export default function QuoteGenerator() {
   const [propertyType, setPropertyType] = useState<string>("");
   const [size, setSize] = useState<string>("");
   const [name, setName] = useState<string>("");
+  const [location, setLocation] = useState<string>("");
 
   const handleMoveType = (type: string) => {
     setMoveType(type);
@@ -40,7 +41,7 @@ export default function QuoteGenerator() {
     message += `*Size/Volume:* ${size}\n\n`;
     message += `Please provide me with an estimated cost and the next steps.\n\n`;
     message += `*My Name is:* ${name || "[Not Provided]"}\n`;
-    message += `*My Location is:* [Please write your location here]`;
+    message += `*My Location is:* ${location || "[Not Provided]"}`;
 
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -51,6 +52,7 @@ export default function QuoteGenerator() {
     setPropertyType("");
     setSize("");
     setName("");
+    setLocation("");
     setStep(1);
   };
 
@@ -188,7 +190,7 @@ export default function QuoteGenerator() {
             </motion.div>
           )}
 
-          {/* STEP 4: Name Selection */}
+          {/* STEP 4: Name and Location Selection */}
           {step === 4 && (
             <motion.div 
               key="step4"
@@ -197,9 +199,9 @@ export default function QuoteGenerator() {
               exit={{ opacity: 0, x: -50 }}
               className="flex flex-col items-center"
             >
-              <h4 className="text-xl font-bold mb-6 text-dark">Almost done! What is your name?</h4>
+              <h4 className="text-xl font-bold mb-6 text-dark">Almost done! Your details?</h4>
               <form 
-                onSubmit={(e) => { e.preventDefault(); if (name.trim()) setStep(5); }}
+                onSubmit={(e) => { e.preventDefault(); if (name.trim() && location.trim()) setStep(5); }}
                 className="flex flex-col gap-4 w-full max-w-sm"
               >
                 <input 
@@ -210,9 +212,17 @@ export default function QuoteGenerator() {
                   className="px-6 py-4 rounded-full border-2 border-gray-200 text-gray-700 font-medium focus:border-primary focus:outline-none w-full"
                   required
                 />
+                <input 
+                  type="text"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                  placeholder="Enter your location (e.g. Dubai Marina)"
+                  className="px-6 py-4 rounded-full border-2 border-gray-200 text-gray-700 font-medium focus:border-primary focus:outline-none w-full"
+                  required
+                />
                 <button 
                   type="submit"
-                  disabled={!name.trim()}
+                  disabled={!name.trim() || !location.trim()}
                   className="px-8 py-4 rounded-full font-bold bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary-light hover:-translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Next Step
