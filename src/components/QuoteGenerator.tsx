@@ -39,7 +39,8 @@ export default function QuoteGenerator() {
     
     message += `*Size/Volume:* ${size}\n\n`;
     message += `Please provide me with an estimated cost and the next steps.\n\n`;
-    message += `*My Name is:* ${name || "[Not Provided]"}`;
+    message += `*My Name is:* ${name || "[Not Provided]"}\n`;
+    message += `*My Location is:* [Please write your location here]`;
 
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
