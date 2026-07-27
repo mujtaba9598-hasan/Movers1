@@ -75,7 +75,7 @@ export default function About() {
             </p>
             
             <blockquote className="border-l-4 border-accent pl-6 my-8 italic text-gray-800 bg-white p-6 shadow-sm rounded-r-2xl">
-              "In an industry built on trust, our 15-year reputation is our most valuable asset. My promise to every client—whether a family moving into their first villa or a corporation relocating its headquarters—is absolute precision, uncompromising safety, and a seamless transition. Your peace of mind is our final deliverable."
+              "In an industry built on trust, our 15 year reputation is our most valuable asset. My promise to every client, whether a family moving into their first villa or a corporation relocating its headquarters, is absolute precision, uncompromising safety, and a seamless transition. Your peace of mind is our final deliverable."
             </blockquote>
 
             <p className="text-gray-700 leading-relaxed">
