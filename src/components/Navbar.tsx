@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
-              <Image src="/assets/logo.png" alt="Movers & Packers" width={60} height={60} className="object-contain" />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/logo.png`} alt="Movers & Packers" width={60} height={60} className="object-contain" />
             </Link>
             <span className="ml-3 font-bold text-xl tracking-tight text-primary">MOVERS & PACKERS</span>
           </div>

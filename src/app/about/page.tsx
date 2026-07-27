@@ -23,7 +23,7 @@ export default function About() {
       
       {/* Hero Section: The Founder's Vision */}
       <section className="relative h-[60vh] bg-black overflow-hidden">
-        <Image src="/assets/company_growth.png" alt="Company Growth" fill className="object-cover opacity-50" />
+        <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/company_growth.png`} alt="Company Growth" fill className="object-cover opacity-50" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-[family-name:var(--font-roboto-condensed)]">
@@ -48,7 +48,7 @@ export default function About() {
             className="w-full md:w-1/2 relative h-[600px] rounded-3xl overflow-hidden shadow-2xl group"
           >
             <Image 
-              src="/assets/truck_vision.png" 
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/truck_vision.png`} 
               alt="Our Premium Moving Fleet" 
               fill 
               className="object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -130,7 +130,7 @@ export default function About() {
               className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group"
             >
               <div className="relative h-64 overflow-hidden">
-                <Image src="/assets/process_delicate.png" alt="Packing Delicate Items" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/process_delicate.png`} alt="Packing Delicate Items" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-primary mb-3">Delicate & High-Value Care</h3>
@@ -148,7 +148,7 @@ export default function About() {
               className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group"
             >
               <div className="relative h-64 overflow-hidden">
-                <Image src="/assets/process_sofa.png" alt="Commercial Office Relocation" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/process_sofa.png`} alt="Commercial Office Relocation" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-primary mb-3">Commercial & Residential</h3>
@@ -166,7 +166,7 @@ export default function About() {
               className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group"
             >
               <div className="relative h-64 overflow-hidden">
-                <Image src="/assets/process_inventory.png" alt="Inventory & Numbering" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/process_inventory.png`} alt="Inventory & Numbering" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-primary mb-3">Strategic Inventorying</h3>

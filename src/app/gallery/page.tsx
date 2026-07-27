@@ -6,12 +6,12 @@ import QuoteGenerator from "@/components/QuoteGenerator";
 
 export default function Gallery() {
   const images = [
-    { src: "/assets/packing_assessment_1785124754858.png", title: "Strategic Assessment" },
-    { src: "/assets/packing_protection_1785124761917.png", title: "Premium Protection" },
-    { src: "/assets/packing_loading_1785124769522.png", title: "Secure Loading" },
-    { src: "/assets/process_delicate.png", title: "Delicate Item Care" },
-    { src: "/assets/process_sofa.png", title: "Commercial Relocation" },
-    { src: "/assets/process_inventory.png", title: "Strategic Inventorying" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/packing_assessment_1785124754858.png`, title: "Strategic Assessment" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/packing_protection_1785124761917.png`, title: "Premium Protection" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/packing_loading_1785124769522.png`, title: "Secure Loading" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/process_delicate.png`, title: "Delicate Item Care" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/process_sofa.png`, title: "Commercial Relocation" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/process_inventory.png`, title: "Strategic Inventorying" },
   ];
 
   return (

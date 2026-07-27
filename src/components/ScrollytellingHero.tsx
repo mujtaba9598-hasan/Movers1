@@ -8,7 +8,7 @@ export default function ScrollytellingHero() {
     <div className="relative h-[80vh] bg-black overflow-hidden">
       {/* Background Image with Parallax or Static Fade */}
       <Image 
-        src="/assets/movers_carrying_boxes.jpg" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/movers_carrying_boxes.jpg`} 
         alt="Moving Service Hero" 
         fill 
         className="object-cover opacity-60"
