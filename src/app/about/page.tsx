@@ -6,7 +6,7 @@ import { ShieldCheck, Zap, Handshake } from "lucide-react";
 
 export default function About() {
   const timeline = [
-    { year: "Year 1", desc: "Mr. Saif founds the company with a single truck and a commitment to zero-damage moves." },
+    { year: "Year 1", desc: "Abdul Majeed founds the company with a single truck and a commitment to zero-damage moves." },
     { year: "Year 5", desc: "Expanded to a fleet of 20+ specialized vehicles, introducing industrial-grade packing materials." },
     { year: "Year 10", desc: "Launched our B2B Commercial Relocation division, securing contracts with top multinational corporations." },
     { year: "Year 15", desc: "Celebrating 10,000+ successful moves, standing as the undisputed leader in premium packing and moving." }
@@ -26,18 +26,18 @@ export default function About() {
         <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/company_growth.png`} alt="Company Growth" fill className="object-cover opacity-50" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-[family-name:var(--font-roboto-condensed)]">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 font-[family-name:var(--font-roboto-condensed)]">
               A Legacy of Trust, Driven by Excellence
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto drop-shadow-md">
-              Founded and led by Mr. Saif, Movers & Packers UAE has redefined the relocation industry over the past 15 years.
+              Founded and led by Abdul Majeed, Movers & Packers UAE has redefined the relocation industry over the past 20 years of UAE experience.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* CEO Message & 15 Year Journey */}
-      <section className="py-24">
+      <section className="py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-16 items-center">
           
           <motion.div 
@@ -68,18 +68,18 @@ export default function About() {
             className="w-full md:w-1/2 prose prose-lg"
           >
             <h2 className="text-4xl font-bold text-primary font-[family-name:var(--font-roboto-condensed)] mb-6">
-              15 Years of Dynamic Growth
+              20 Years of Dynamic Growth
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              What started as a vision to provide stress-free, reliable moving services has evolved into the UAE's premier logistics and relocation powerhouse. Under the dynamic and visionary leadership of Mr. Saif, our company blends cutting-edge packing technology with old-fashioned customer care.
+              What started as a vision to provide stress-free, reliable moving services has evolved into the UAE's premier logistics and relocation powerhouse. Under the dynamic and visionary leadership of Abdul Majeed, our company blends cutting-edge packing technology with old-fashioned customer care.
             </p>
             
             <blockquote className="border-l-4 border-accent pl-6 my-8 italic text-gray-800 bg-white p-6 shadow-sm rounded-r-2xl">
-              "In an industry built on trust, our 15 year reputation is our most valuable asset. My promise to every client, whether a family moving into their first villa or a corporation relocating its headquarters, is absolute precision, uncompromising safety, and a seamless transition. Your peace of mind is our final deliverable."
+              "In an industry built on trust, our 20 year reputation is our most valuable asset. My promise to every client, whether a family moving into their first villa or a corporation relocating its headquarters, is absolute precision, uncompromising safety, and a seamless transition. Your peace of mind is our final deliverable."
             </blockquote>
 
             <p className="text-gray-700 leading-relaxed">
-              We don't just transport belongings; we safely transition your memories and business assets to their next destination.
+              <span className="text-primary font-bold px-1.5 py-0.5 rounded bg-primary/10 border-l-4 border-accent inline-block my-1">We don't just transport belongings;</span> we safely transition your memories and business assets to their next destination.
             </p>
           </motion.div>
         </div>
@@ -148,7 +148,7 @@ export default function About() {
               className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group"
             >
               <div className="relative h-64 overflow-hidden">
-                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/process_sofa.png`} alt="Commercial Office Relocation" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/handymen.jpg`} alt="Commercial Office Relocation" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-primary mb-3">Commercial & Residential</h3>
@@ -166,7 +166,7 @@ export default function About() {
               className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group"
             >
               <div className="relative h-64 overflow-hidden">
-                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/process_inventory.png`} alt="Inventory & Numbering" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/truck_vision.png`} alt="Inventory & Numbering" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-primary mb-3">Strategic Inventorying</h3>

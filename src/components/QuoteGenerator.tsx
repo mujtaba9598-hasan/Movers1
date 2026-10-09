@@ -29,9 +29,9 @@ export default function QuoteGenerator() {
   };
 
   const generateWhatsAppLink = () => {
-    const phoneNumber = "971505385047";
+    const phoneNumber = "971554551928";
     
-    let message = `Hello Movers & Packers Team,\n\nI would like to request a free premium quotation for my upcoming move. Here are my details:\n\n`;
+    let message = `Hello Too Fast Movers & Packers Team,\n\nI would like to request a free premium quotation for my upcoming move. Here are my details:\n\n`;
     message += `*Move Category:* ${moveType}\n`;
     
     if (moveType === "Residential") {
@@ -98,11 +98,11 @@ export default function QuoteGenerator() {
             >
               <h4 className="text-xl font-bold mb-6 text-dark">What type of move are you planning?</h4>
               <div className="flex flex-wrap justify-center gap-4">
-                {["Residential", "Commercial", "International"].map((type) => (
+                {["Residential", "Commercial"].map((type) => (
                   <button 
                     key={type}
                     onClick={() => handleMoveType(type)}
-                    className="px-8 py-4 rounded-full border-2 border-gray-200 text-gray-700 font-bold hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
+                    className="px-4 py-3 md:px-8 md:py-4 text-center text-sm md:text-base rounded-full border-2 border-gray-200 text-gray-700 font-bold hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
                   >
                     {type}
                   </button>
@@ -128,7 +128,7 @@ export default function QuoteGenerator() {
                       <button 
                         key={type}
                         onClick={() => handlePropertyType(type)}
-                        className="px-8 py-4 rounded-full border-2 border-gray-200 text-gray-700 font-bold hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
+                        className="px-4 py-3 md:px-8 md:py-4 text-center text-sm md:text-base rounded-full border-2 border-gray-200 text-gray-700 font-bold hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
                       >
                         {type}
                       </button>
@@ -143,7 +143,7 @@ export default function QuoteGenerator() {
                       <button 
                         key={sizeOption}
                         onClick={() => handleSize(sizeOption)}
-                        className="px-8 py-4 rounded-full border-2 border-gray-200 text-gray-700 font-bold hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
+                        className="px-4 py-3 md:px-8 md:py-4 text-center text-sm md:text-base rounded-full border-2 border-gray-200 text-gray-700 font-bold hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
                       >
                         {sizeOption}
                       </button>
@@ -170,7 +170,7 @@ export default function QuoteGenerator() {
                     <button 
                       key={s}
                       onClick={() => handleSize(s)}
-                      className="px-6 py-3 rounded-full border-2 border-gray-200 text-gray-700 font-medium hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
+                      className="px-4 py-2 md:px-6 md:py-3 text-center text-sm md:text-base rounded-full border-2 border-gray-200 text-gray-700 font-medium hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
                     >
                       {s}
                     </button>
@@ -180,7 +180,7 @@ export default function QuoteGenerator() {
                     <button 
                       key={s}
                       onClick={() => handleSize(s)}
-                      className="px-6 py-3 rounded-full border-2 border-gray-200 text-gray-700 font-medium hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
+                      className="px-4 py-2 md:px-6 md:py-3 text-center text-sm md:text-base rounded-full border-2 border-gray-200 text-gray-700 font-medium hover:border-primary hover:bg-primary hover:text-white transition-all magnetic-btn"
                     >
                       {s}
                     </button>
@@ -223,7 +223,7 @@ export default function QuoteGenerator() {
                 <button 
                   type="submit"
                   disabled={!name.trim() || !location.trim()}
-                  className="px-8 py-4 rounded-full font-bold bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary-light hover:-translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-3 md:px-8 md:py-4 text-center text-sm md:text-base rounded-full font-bold bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary-light hover:-translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Next Step
                 </button>
@@ -248,7 +248,7 @@ export default function QuoteGenerator() {
               <div className="flex gap-4">
                 <button 
                   onClick={reset}
-                  className="px-6 py-3 rounded-full font-bold text-gray-500 hover:text-dark hover:bg-gray-100 transition-colors"
+                  className="px-4 py-2 md:px-6 md:py-3 text-center text-sm md:text-base rounded-full font-bold text-gray-500 hover:text-dark hover:bg-gray-100 transition-colors"
                 >
                   Start Over
                 </button>

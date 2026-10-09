@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function MultiAgentChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { id: 1, text: "Hi! I'm Saif, the owner of Movers & Packers. How can I or my team help you today?", sender: "Saif", role: "Owner" }
+    { id: 1, text: "Hi! I'm Abdul Majeed, the owner of Movers & Packers. How can I or my team help you today?", sender: "Abdul Majeed", role: "Owner" }
   ]);
   const [input, setInput] = useState("");
 
@@ -23,7 +23,7 @@ export default function MultiAgentChat() {
     setTimeout(() => {
       setMessages(prev => [...prev, { 
         id: Date.now(), 
-        text: "Thanks for reaching out! Our logistics team will review this. For immediate help, call us at 050-5385047.", 
+        text: "Thanks for reaching out! Our logistics team will review this. For immediate help, call us at +971 55 455 1928.", 
         sender: "Sarah", 
         role: "Logistics Expert" 
       }]);
@@ -52,7 +52,7 @@ export default function MultiAgentChat() {
             <div className="bg-primary p-4 flex justify-between items-center text-white">
               <div>
                 <h3 className="font-bold">Live Support</h3>
-                <p className="text-xs text-white/80">Saif & Team are online</p>
+                <p className="text-xs text-white/80">Abdul Majeed & Team are online</p>
               </div>
               <button onClick={() => setIsOpen(false)} className="hover:text-gray-300">
                 <X size={20} />
@@ -69,7 +69,7 @@ export default function MultiAgentChat() {
                       <span className="text-xs text-gray-500 font-medium">{msg.sender} ({msg.role})</span>
                     </div>
                   )}
-                  <div className={`p-3 rounded-2xl max-w-[85%] text-sm ${msg.sender === "You" ? "bg-primary text-white rounded-tr-none" : "bg-white border shadow-sm rounded-tl-none text-gray-800"}`}>
+                  <div className={`p-3 rounded-2xl max-w-[85%] text-sm break-words ${msg.sender === "You" ? "bg-primary text-white rounded-tr-none" : "bg-white border shadow-sm rounded-tl-none text-gray-800"}`}>
                     {msg.text}
                   </div>
                 </div>

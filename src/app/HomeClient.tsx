@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { Home as HomeIcon, Briefcase, Box, Package, Wrench, Archive, RefreshCcw, Blinds, Settings, Car, ShieldCheck, Clock, ThumbsUp, Leaf } from "lucide-react";
+import { Home as HomeIcon, Briefcase, Box, Package, Wrench, Archive, RefreshCcw, Blinds, Settings, Car, ShieldCheck, Clock, ThumbsUp, Leaf, Headset, BadgeDollarSign } from "lucide-react";
 import QuoteGenerator from "@/components/QuoteGenerator";
 
 function AnimatedCounter({ from, to, duration, suffix = "" }: { from: number, to: number, duration: number, suffix?: string }) {
@@ -32,8 +32,8 @@ function AnimatedCounter({ from, to, duration, suffix = "" }: { from: number, to
 
 export default function Home() {
   const whyChooseUsPoints = [
-    { emoji: "🌟", title: "Local Expertise", desc: "Serving Ras Al Khaimah residents proudly since 2015." },
-    { emoji: "🏗️", title: "Elite Moving Team", desc: "Specialized crews trained for delicate and heavy lifting." },
+    { emoji: "🌟", title: "Local Expertise", desc: "Serving Dubai and the UAE proudly for over 20 years." },
+    { emoji: "🏗️", title: "Elite Moving Team", desc: "Expert crews trained for precision handling and premium care." },
     { emoji: "🚛", title: "Advanced Fleet", desc: "Modern, fully-equipped trucks for secure transportation." },
     { emoji: "💰", title: "Transparent Pricing", desc: "Honest, competitive rates with absolutely no hidden fees." },
     { emoji: "⏱️", title: "Punctual Execution", desc: "Guaranteed on-time arrivals and rapid completion." },
@@ -49,28 +49,17 @@ export default function Home() {
     { step: "04", title: "Strategic Labeling", desc: "Every box is clearly categorized and labeled, ensuring an effortless and organized unpacking experience." }
   ];
 
-  const services = [
-    { title: "Furniture Moving", desc: "Safe, rapid, and efficient relocation of premium home and office furniture.", icon: <Box className="w-8 h-8 mb-4 text-accent" /> },
-    { title: "Packing Solutions", desc: "Professional-grade packing utilizing high-quality materials to absolutely protect your belongings.", icon: <Package className="w-8 h-8 mb-4 text-accent" /> },
-    { title: "Dismantling & Assembly", desc: "Expert teardown and reassembly of all types of complex and luxury furniture.", icon: <Wrench className="w-8 h-8 mb-4 text-accent" /> },
-    { title: "Office Relocation", desc: "Smooth, highly organized corporate shifting designed to guarantee zero business downtime.", icon: <Briefcase className="w-8 h-8 mb-4 text-accent" /> },
-    { title: "Villa & Apartment Moving", desc: "Specialized, white-glove moving services tailored for high-end residential homes.", icon: <HomeIcon className="w-8 h-8 mb-4 text-accent" /> },
-    { title: "Full Packing Services", desc: "Comprehensive end-to-end packing of personal, household, and sensitive office items.", icon: <Archive className="w-8 h-8 mb-4 text-accent" /> },
-    { title: "Used Furniture Handling", desc: "Expert assistance and logistics for relocating or purchasing second-hand furniture.", icon: <RefreshCcw className="w-8 h-8 mb-4 text-accent" /> },
-    { title: "Curtain Installation", desc: "Professional dismantling, transportation, and precise installation of curtains and blinds.", icon: <Blinds className="w-8 h-8 mb-4 text-accent" /> },
-    { title: "Furniture Refixing", desc: "Meticulously reassembling and arranging your furniture in your new home exactly as required.", icon: <Settings className="w-8 h-8 mb-4 text-accent" /> },
-    { title: "Vehicle Recovery", desc: "Reliable car towing and vehicle recovery services available across Ras Al Khaimah and beyond.", icon: <Car className="w-8 h-8 mb-4 text-accent" /> }
-  ];
+
 
   const stats = [
-    { from: 0, to: 15, suffix: "+", label: "Years of Experience", duration: 2 },
+    { from: 0, to: 20, suffix: "+", label: "Years of UAE Experience", duration: 2 },
+    { from: 0, to: 1400, suffix: "+", label: "Total Successful Moves", duration: 3 },
+    { from: 0, to: 1000, suffix: "+", label: "Residential Moves", duration: 2.5 },
+    { from: 0, to: 400, suffix: "+", label: "Commercial Moves", duration: 2.5 },
     { from: 0, to: 100, suffix: "%", label: "Client Satisfaction", duration: 2.5 },
-    { from: 0, to: 10000, suffix: "+", label: "Total Successful Moves", duration: 3 },
-    { from: 0, to: 970, suffix: "+", label: "Corporate Relocations", duration: 2.5 },
-    { from: 0, to: 768, suffix: "+", label: "Residential Transfers", duration: 2.5 },
-    { from: 0, to: 30, suffix: "+", label: "Trained Moving Experts STAFF", duration: 2 },
-    { from: 0, to: 100, suffix: "%", label: "Damage-Free Transit", duration: 2.5 },
-    { from: 0, to: 5, suffix: "+", label: "Emirates Covered", duration: 1.5 },
+    { from: 0, to: 35, suffix: "+", label: "Professional Staff & Handymen", duration: 2 },
+    { from: 0, to: 100, suffix: "%", label: "Damage-Free & Safe", duration: 2.5 },
+    { from: 0, to: 7, suffix: "", label: "Emirates Covered (Centered in Dubai)", duration: 1.5 },
   ];
 
   return (
@@ -100,6 +89,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Customer Peace of Mind / Pain Points Addressed */}
+      <section className="py-20 bg-primary/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-dark font-[family-name:var(--font-roboto-condensed)] mb-4">
+              We Understand Your Biggest Moving Concerns
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Shifting homes shouldn't disrupt your life. We've designed our service around solving the most common headaches customers face.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white p-5 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border-t-4 border-accent"
+            >
+              <Clock className="w-10 h-10 text-primary mb-3" />
+              <h3 className="text-lg font-bold text-dark mb-2">Weekend Shifting & On-Time Setup</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Need to shift over the weekend? We guarantee punctual execution so you can unpack, sleep peacefully in your new home, and confidently head to work on Monday without any delay.
+              </p>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white p-5 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border-t-4 border-accent"
+            >
+              <ShieldCheck className="w-10 h-10 text-primary mb-3" />
+              <h3 className="text-lg font-bold text-dark mb-2">100% Scratchless Guarantee</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Your belongings are precious. We use premium multi-layer wrapping to ensure every single item reaches its destination in absolutely scratch-less condition. Zero damage, zero complaints.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-white p-5 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border-t-4 border-accent"
+            >
+              <BadgeDollarSign className="w-10 h-10 text-primary mb-3" />
+              <h3 className="text-lg font-bold text-dark mb-2">Smooth Process & No Hidden Charges</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                What we quote is exactly what you pay. No last-minute surprises, no hidden fees. Just a completely smooth, transparent moving experience from start to finish.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="py-24 bg-light overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,13 +161,13 @@ export default function Home() {
                 Why Choose Movers & Packers?
               </h2>
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Experience matters. Founded and led by Mr. Saif, we have built an unshakeable reputation on trust, speed, and safety. We don’t just move boxes; we transition lives.
+                Experience matters. Founded and led by Abdul Majeed, we have built an unshakeable reputation on trust, speed, and safety. We don’t just move boxes; we transition lives.
               </p>
               <div className="p-6 bg-white rounded-2xl shadow-lg border-l-4 border-accent">
                 <p className="italic text-gray-600 font-medium">
                   "Our 100% client satisfaction rate is not just a metric; it is the foundation of our entire company."
                 </p>
-                <p className="text-right text-sm font-bold mt-4 text-primary">— Mr. Saif</p>
+                <p className="text-right text-sm font-bold mt-4 text-primary">— Abdul Majeed</p>
               </div>
             </motion.div>
 
@@ -151,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* The Science of Packing Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -191,23 +237,33 @@ export default function Home() {
                 </li>
               </ul>
 
-              <h3 className="text-3xl font-bold mb-6 text-primary">Why Trust Movers & Packers?</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex items-start gap-3">
-                  <ShieldCheck className="text-accent flex-shrink-0 w-6 h-6" />
-                  <p className="text-gray-600 font-medium">Expert handling of all furniture varieties.</p>
+              <h3 className="text-3xl font-bold mb-2 text-primary">Why Choose Us?</h3>
+              <p className="text-gray-500 font-medium mb-6 italic">"Your Seamless Move, Our Utmost Responsibility"</p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Card 1 */}
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col gap-2 hover:shadow-md transition-shadow">
+                  <ShieldCheck className="text-accent w-8 h-8" />
+                  <h4 className="font-bold text-dark text-lg leading-tight">Trained Staff & Quality Material</h4>
+                  <p className="text-sm text-gray-500 font-medium">100% Damage-Free Guarantee</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Leaf className="text-accent flex-shrink-0 w-6 h-6" />
-                  <p className="text-gray-600 font-medium">Eco-friendly & robust packing supplies.</p>
+                {/* Card 2 */}
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col gap-2 hover:shadow-md transition-shadow">
+                  <Clock className="text-accent w-8 h-8" />
+                  <h4 className="font-bold text-dark text-lg leading-tight">On-Time Delivery</h4>
+                  <p className="text-sm text-gray-500 font-medium">Punctual & reliable execution</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Clock className="text-accent flex-shrink-0 w-6 h-6" />
-                  <p className="text-gray-600 font-medium">Fast, reliable, and affordable services.</p>
+                {/* Card 3 */}
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col gap-2 hover:shadow-md transition-shadow">
+                  <Headset className="text-accent w-8 h-8" />
+                  <h4 className="font-bold text-dark text-lg leading-tight">24/7 Available</h4>
+                  <p className="text-sm text-gray-500 font-medium">Round-the-clock moving support</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <ThumbsUp className="text-accent flex-shrink-0 w-6 h-6" />
-                  <p className="text-gray-600 font-medium">100% Guaranteed safety & punctuality.</p>
+                {/* Card 4 */}
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col gap-2 hover:shadow-md transition-shadow">
+                  <BadgeDollarSign className="text-accent w-8 h-8" />
+                  <h4 className="font-bold text-dark text-lg leading-tight">Reasonable Rates</h4>
+                  <p className="text-sm text-gray-500 font-medium">Absolutely zero hidden charges</p>
                 </div>
               </div>
             </motion.div>
@@ -240,35 +296,49 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Services Overview */}
-      <section className="py-24 bg-dark text-white">
+      {/* Handyman Reassembly Section */}
+      <section className="py-24 bg-light overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-roboto-condensed)]">Comprehensive Services in Ras Al Khaimah</h2>
-            <p className="mt-4 text-xl text-white/80 max-w-3xl mx-auto">Providing a full suite of premium relocation services designed to meet the exact needs of our clients across Ras Al Khaimah and the UAE.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {services.map((service, i) => (
-              <motion.div 
-                key={i} 
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: (i % 4) * 0.1 }}
-                className="bg-primary-light/20 border border-white/10 rounded-2xl p-6 hover:bg-white hover:text-dark transition-colors duration-500 group flex flex-col"
-              >
-                {service.icon}
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-white/80 text-sm group-hover:text-gray-600 mb-6 leading-relaxed transition-colors flex-grow">{service.desc}</p>
-                <Link href="/contact" className="inline-block text-sm font-bold border-b border-accent pb-1 group-hover:text-primary transition-colors self-start mt-auto">
-                  Get Details →
-                </Link>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl"
+            >
+              <Image 
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/handymen.jpg`} 
+                alt="Professional Handyman and Reassembly Service" 
+                fill 
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-dark font-[family-name:var(--font-roboto-condensed)] mb-6">
+                Delivery Is Just the Beginning
+              </h2>
+              <p className="text-xl text-primary font-medium mb-6">
+                Expert Unboxing, Furniture Reassembly & Handyman Services at Your New Location.
+              </p>
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                Our job isn't just about transporting your items. Once your belongings reach the destination, our professional handymen meticulously unbox, reassemble, and arrange everything exactly where you want it. From complex furniture joining to curtain installation, we ensure your new space feels like home instantly.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3 text-dark font-medium"><Wrench className="text-accent w-6 h-6" /> Complete Furniture Reassembly</li>
+                <li className="flex items-center gap-3 text-dark font-medium"><Settings className="text-accent w-6 h-6" /> TV Mounting & Appliances Setup</li>
+                <li className="flex items-center gap-3 text-dark font-medium"><Blinds className="text-accent w-6 h-6" /> Curtain & Blinds Installation</li>
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>
+
+
+
 
       {/* Quote Generator Section */}
       <section className="py-24 bg-gray-50">

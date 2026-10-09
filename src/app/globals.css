@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-    @apply bg-light text-dark font-sans;
+    @apply bg-light text-dark font-sans overflow-x-hidden max-w-full;
   }
 }
 
@@ -43,3 +43,9 @@
 .shining-card:hover::before {
   left: 200%;
 }
+
+@font-face { font-family: 'Anemone'; src: url('/fonts/Anemone.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+.font-anemone { font-family: 'Anemone', sans-serif; }
+
+@font-face { font-family: 'AwesomeCustom'; src: url('/fonts/Awesome.otf') format('opentype'); font-weight: normal; font-style: normal; }
+.font-awesome-custom { font-family: 'AwesomeCustom', sans-serif; }
